@@ -1,0 +1,39 @@
+<div *ngIf="project" class="card m-2 border-0">
+    <div class="card-body mt-3 mx-5 bg-primary-light rounded border-bottom border-top border-primary">
+        <h5 class="card-title display-7 text-center">{{ project.name }}</h5>
+        <div class="card-text text-center">{{ project.description }}</div>
+        <div *ngIf="project.userStory" class="card-text text-center fw-light my-2">
+            <span>User story:</span>
+            {{ project.userStory }}
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <div class="mb-2 mt-3 card-group" *ngIf="project.tech != [] && project.tech[0] != ''">
+                    <span class="text-center m-2 badge fw-light fs-6 bg-secondary" *ngFor="let tech of project.tech">
+                        {{tech}}
+                    </span>
+                </div>
+            </div>            
+            <div class="col text-end mt-3">
+                <a *ngIf=" project.github != '' " href="{{ project.github }}" class="btn btn-primary mx-2 mb-2 p-3">GitHub</a>
+                <a *ngIf=" project.link != '' " href="{{ project.link }}" class="btn btn-primary mx-2 mb-2 p-3">Website</a>
+            </div>
+        </div>        
+    </div>    
+    <div class="m-3 mx-5 bg-light rounded border-bottom border-top border-primary">
+        <div *ngIf="project.images" class="m-2 d-flex justify-content-center">
+            <ngb-carousel *ngIf="getSlides().length > 1" class="mx-3">
+                <ng-template ngbSlide *ngFor="let slide of getSlides()">
+                    <div class="wrapper" routerLinkActive="active">
+                        <img [src]="slide" alt="Slide" class="img-fluid">
+                    </div>
+                    <div class="carousel-caption"></div>
+                </ng-template>
+            </ngb-carousel>
+            <div *ngIf="getSlides().length == 1" class="mx-3">
+                <img [src]="getSlides()[0]" alt="Slide" class="img-fluid">
+            </div>
+        </div>
+    </div>    
+</div>
+<div *ngIf="!project" class="card m-2 border-0 text-muted text-center display-8">Couldn't find project</div>

@@ -1,0 +1,89 @@
+<div class="container-fluid bg-about m-0 p-0 h-100">
+    <div class="rounded-2 px-4 py-3">
+        <div class="row">
+            <div class="col col-md my-2">
+                <div class="py-2 px-4 blur-hard border-bottom border-top border-primary rounded-2">
+                    <h5
+                        class="card-title display-6 text-secondary text-center rounded border-top border-bottom border-secondary bg-primary-light">
+                        Welcome!</h5>
+                    <p class="fw-light fs-6 lh-lg">I am Orsolya, a last semester BSc student at Budapest University of
+                        Technology and Economics (BME), at the Faculty of Electrical Engineering and Informatics (VIK).
+                        I recently finished my thesis in Azure serverless and now I'm looking for an internship or
+                        junior position to obtain
+                        my degree. I currently live in Baden-Württemberg, Germany.
+                        My fields of interest are mainly Angular, .NET and Azure but I am excited to learn about any new
+                        tech advancements.
+                        In my free time I enjoy hiking, going to concerts and improving my projects.</p>
+                    <p class="fw-light">
+                        Read my thesis
+                        <a [routerLink]="'/thesis'" class="text-decoration-none font-monospace">here</a>.
+                        See the project's details <a [routerLink]="'/project/1'"
+                            class="text-decoration-none font-monospace">here</a>.
+                    </p>
+                </div>
+                <div *ngIf="resume"
+                    class="my-2 py-2 px-4 rounded-2 text-center fw-light border-bottom border-top border-primary blur-hard">
+                    <div
+                        class="display-7 py-2 mb-3 text-secondary rounded border-top border-bottom border-secondary bg-primary-light">
+                        Preferred technologies
+                    </div>
+                    <div class="row">
+                        <div *ngFor="let favourite of resume.favourites" class="col my-2 card-group">
+                            <div class="card bg-opaque border-0">
+                                <div data-bs-toggle="tooltip" data-bs-placement="right" title="{{favourite.name}}">
+                                    <img class="mx-2" width="70rem" src="{{favourite.iconLink}}"
+                                        alt="{{favourite.name}}">
+                                </div>
+                                <div class="card-footer border-0 rounded-3 hide-lg bg-opaque">
+                                    <div class="card-text text-center text-secondary">{{favourite.name}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 mt-2" *ngIf="resume">
+                <div class="mx-1 text-center">
+                    <img class="rounded img-fluid border border-primary" src="{{resume.profile}}" alt="profile"
+                        oncontextmenu="return false;">
+                </div>
+                <div class="my-2 mx-1" *ngIf="resume.languages">
+                    <div
+                        class="display-8 text-center border border-primary text-secondary bg-primary-light rounded py-2">
+                        Languages
+                    </div>
+                    <div class="text-secondary">
+                        <div class="my-2 p-2 border border-primary rounded blur-hard"
+                            *ngFor="let lang of resume.languages">
+                            <div class="row">
+                                <div class="col">{{lang.name | uppercase}}</div>
+                                <div class="col-4 text-center">{{lang.level | uppercase}}</div>
+                            </div>
+                            <div class="row" *ngIf="lang.certification!=''">
+                                <small class="col">{{lang.certification}}</small>
+                                <small class="col-4 text-center">{{lang.year}}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2" *ngIf="resume.hobbies">
+                    <div
+                        class="display-8 text-center border border-primary text-secondary bg-primary-light rounded py-2 mx-1">
+                        Hobbies
+                    </div>
+                    <div class="text-primary row my-2 mx-1 rounded">
+                        <div class="py-2 m-1 border border-primary text-secondary rounded text-center col blur-hard d-flex flex-column justify-content-center"
+                            *ngFor="let hobby of resume.hobbies">
+                            <div>
+                                <img src="{{hobby.iconLink}}" width="24" alt="icon">
+                            </div>
+                            <div>
+                                {{hobby.name}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<div class="container-fluid" *ngIf="projects">    
+    <nav class="navbar blur-hard my-2 p-2 rounded-2 border-top border-bottom border-primary d-flex justify-content-center sticky-lg-top text-center">
+        <form class="d-flex flex-lg-row flex-wrap">
+            <div class="dropdown m-2" *ngIf="techs">
+                <a class="btn p-3 dropdown-toggle bg-light text-secondary border border-primary"
+                    data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Technologies</a>
+                <div class="dropdown-menu py-0">
+                    <div *ngFor="let tech of techs">
+                        <a class="dropdown-item bg-light text-secondary">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                                    [checked]="!isChecked()" (click)="changeTechState(tech)">
+                                <label class="form-check-label" for="flexSwitchCheckChecked">{{tech}}</label>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown m-2" *ngIf="years">
+                <a class="btn p-3 dropdown-toggle bg-light text-secondary border border-primary"
+                    data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{year}}</a>
+                <div class="dropdown-menu">
+                    <div *ngFor="let y of years">
+                        <a class="dropdown-item bg-light text-secondary" role="button" (click)="setYear(y)">
+                            {{y}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="btn p-3 btn-primary m-2" type="button" (click)="filterTech()"><i
+                    class="bi bi-funnel"></i></button>
+        </form>
+    </nav>
+
+    <div class="row">
+        <div *ngFor="let project of projects" class="col-md-4 my-2 card-group">
+            <div class="card rounded border-0 p-0 bg-light">
+                <a [routerLink]="['/project', project.id]">
+                    <img class="card-img-top project-img" [src]="getProjImage(project.id)" alt="Card image">
+                </a>
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title display-8 text-secondary">{{project.name | uppercase}}</h5>
+                    <div class="row mt-auto my-2" *ngIf="project.tech != [] && project.tech[0] != ''">
+                        <span class="text-center mx-2 badge bg-secondary fw-light col my-1"
+                            *ngFor="let tech of project.tech">
+                            {{tech}}
+                        </span>
+                    </div>
+                </div>
+                <div class="card-footer rounded-bottom p-1 pt-0 bg-header border-0">
+                    <div class="card-text text-center text-secondary blur-hard rounded-bottom p-1">{{project.date}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="display-6 text-center my-4" *ngIf="!projects">
+    <div class="display-6 text-center my-4">
+        Sorry, no projects for now...
+    </div>
+</div>

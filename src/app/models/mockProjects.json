@@ -1,0 +1,409 @@
+{
+    "projects": [
+        {
+            "id": 21,
+            "name": "Résumé",
+            "date": "2023",
+            "description": "The website you are looking at.",
+            "userStory": "",
+            "tech": [
+                "Angular 11",
+                "Azure Static Web Apps",
+                "Github Actions",
+                "JSON",
+                "TypeScript",
+                "VS Code"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "https://github.com/dormico/dormico.github.io",
+            "link": ""
+        },
+        {
+            "id": 1,
+            "name": "Restaurant reservation system",
+            "date": "2022",
+            "description": "This project is hosted on Microsoft Azure. In the backend it implements a microservices architecture with Azure Functions. The main idea is to create a reservation system for restaurants, where guests can order meals for a given time and pay in advance and restaurants can manage incoming orders.",
+            "userStory": "",
+            "tech": [
+                "Azure Functions",
+                "Azure Serverless",
+                "Azure Static Web Apps",
+                "Angular 11",
+                "Bootstrap",
+                "Github Actions",                          
+                "CosmosDB",                
+                "C#",     
+                ".NET Core", 
+                "TypeScript",
+                "VS Code"
+            ],
+            "done": true,
+            "images": [
+                "../assets/projects/Restaurant_3_Cart.png",
+                "../assets/projects/Restaurant_7_Email_2.png",
+                "../assets/projects/Restaurant_8_ConfirmSuccess.png",
+                "../assets/projects/Restaurant_11_RestaurantMapEdit.png",
+                "../assets/projects/Restaurant_12_Dashboard.png"
+            ],
+            "github": "https://github.com/dormico/restaurant-reservation-system",
+            "link": "https://ambitious-desert-085d2d503.1.azurestaticapps.net"
+        },
+        {
+            "id": 2,
+            "name": "Blog & Résumé SPA",
+            "date": "2022",
+            "description": "SPA for a fellow university student.",
+            "userStory": "A professional looking personal website with minimal colors. The blog should handle markdown and LaTeX inputs.",
+            "tech": [
+                "Angular 11",
+                "Bootstrap",
+                "JSON",
+                "TypeScript",
+                "VS Code"
+            ],
+            "done": true,
+            "images": [
+                "../assets/projects/attila_1.png"
+            ],
+            "github": "https://github.com/juhosattila/juhosattila.github.io",
+            "link": "https://juhosattila.github.io"
+        },
+        {
+            "id": 3,
+            "name": "Flask blog",
+            "date": "2021",
+            "description": "Blog based on a tutorial.",
+            "userStory": "",
+            "tech": [
+                "Python 3",
+                "Flask",
+                "PyCharm 2020"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "https://github.com/dormico/flask_tutorial",
+            "link": ""
+        },
+        {
+            "id": 4,
+            "name": "Blazor ToDo web app",
+            "date": "2021",
+            "description": "Based on .NET Conf 2021 Cloud Skills Challenge, Build a web app with Blazor Module.",
+            "userStory": "",
+            "tech": [
+                "Blazor",
+                "C#",
+                ".NET"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "https://github.com/dormico/BlazorTodo",
+            "link": ""
+        },
+        {
+            "id": 5,
+            "name": "Pizza backend: .NET Core web API",
+            "date": "2021",
+            "description": "Based on .NET Conf 2021 Cloud Skills Challenge: Create a web API with ASP.NET Core Controllers Module.",
+            "userStory": "",
+            "tech": [
+                ".NET Core",
+                "C#"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "https://github.com/dormico/PizzaAPI",
+            "link": ""
+        },
+        {
+            "id": 6,
+            "name": "Pizza frontend: Razor pages web UI",
+            "date": "2021",
+            "description": "Based on .NET Conf 2021 Cloud Skills Challenge: Create a web UI with ASP.NET Core Module.",
+            "userStory": "",
+            "tech": [
+                ".NET Core",
+                "Razor",
+                "C#"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "https://github.com/dormico/RazorPagesPizza",
+            "link": ""
+        },
+        {
+            "id": 7,
+            "name": "Airflow calculator",
+            "date": "2021",
+            "description": "Airflow calculator for a company with Python Flask banckend and Angular frontend.",
+            "userStory": "",
+            "tech": [
+                "Angular 11",
+                "Flask",             
+                "PyCharm 2020",
+                "Python 3",                
+                "TypeScript",   
+                "VS Code"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "",
+            "link": ""
+        },
+        {
+            "id": 8,
+            "name": "SignalR chat",
+            "date": "2021",
+            "description": "Basic chat application with ASP.NET Core, Angular and SignalR for university course.",
+            "userStory": "",
+            "tech": [
+                ".NET",
+                "Angular",
+                "SignalR",                              
+                "TypeScript", 
+                "VS Code"
+            ],
+            "done": false,
+            "images": [
+                ""
+            ],
+            "github": "https://github.com/dormico/L3_ChattR",
+            "link": ""
+        },
+        {
+            "id": 9,
+            "name": "Payment app",
+            "date": "2021",
+            "description": "Card repository frontend based on a tutorial.",
+            "userStory": "",
+            "tech": [
+                "Angular 11",
+                "TypeScript", 
+                "VS Code"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "https://github.com/dormico/card-repository-angular",
+            "link": ""
+        },
+        {
+            "id": 10,
+            "name": "Payment API",
+            "date": "2021",
+            "description": "Card repository backend based on a tutorial.",
+            "userStory": "",
+            "tech": [
+                "C#",
+                ".NET Core",
+                "MVC",
+                "Visual Studio 2019"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "https://github.com/dormico/card-repository-angular",
+            "link": ""
+        },
+        {
+            "id": 11,
+            "name": "Tents & Trees game logic",
+            "date": "2021",
+            "description": "Tents & Trees game logic for declarative programming course.",
+            "userStory": "",
+            "tech": [
+                "Elixir",
+                "VS Code"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "https://github.com/dormico/Tents_and_trees_Elixir",
+            "link": ""
+        },
+        {
+            "id": 12,
+            "name": "Server logger",
+            "date": "2021",
+            "description": "Server output logger script, filters the generated daily logs based on the given criteria.",
+            "userStory": "",
+            "tech": [
+                "Python 3",
+                "PyCharm 2020"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "https://github.com/dormico/server_logger",
+            "link": ""
+        },
+        {
+            "id": 13,
+            "name": "SPA for a small business",
+            "date": "2021",
+            "description": "Information page for a small business in energy certification.",
+            "userStory": "A plain, two language site with big, eye-catching phone number and ideally with free hosting.",
+            "tech": [
+                "Angular 11",
+                "CSS",
+                "Bootstrap",
+                "TypeScript", 
+                "VS Code"
+            ],
+            "done": true,
+            "images": [
+                "../assets/projects/juhoslevente_1.png",
+                "../assets/projects/juhoslevente_2.png"
+            ],
+            "github": "https://github.com/dormico/angular-certification",
+            "link": "https://leventejuhos.github.io"
+        },
+        {
+            "id": 14,
+            "name": "Film catalogue app",
+            "date": "2020",
+            "description": "Film catalogue app integrated with Capacitor. API provided by https://www.themoviedb.org.",
+            "userStory": "",
+            "tech": [
+                "Angular 11",
+                "Capacitor",
+                "TypeScript", 
+                "VS Code"
+            ],
+            "done": true,
+            "images": [
+                "../assets/projects/film_2.png",
+                "../assets/projects/film_3.png",
+                "../assets/projects/film_1.jpg"
+            ],
+            "github": "https://github.com/dormico/angular-film-catalogue",
+            "link": ""
+        },
+        {
+            "id": 15,
+            "name": "Text detection script",
+            "date": "2020",
+            "description": "Experimenting with the OpenCV library.",
+            "userStory": "",
+            "tech": [
+                "OpenCV",
+                "Python 3",
+                "Tesseract",
+                "VS Code"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "",
+            "link": ""
+        },
+        {
+            "id": 16,
+            "name": "Vocabulary desktop app",
+            "date": "2020",
+            "description": "Vocabulary desktop app for a friend's request.",
+            "tech": [
+                "C#",
+                "Visual Studio 2019"
+            ],
+            "done": false,
+            "images": [
+                "../assets/projects/vocabulary_1.png",
+                "../assets/projects/vocabulary_2.png",
+                "../assets/projects/vocabulary_4.png",
+                "../assets/projects/vocabulary_5.png"
+            ],
+            "github": "https://github.com/dormico/Vocabulary",
+            "link": ""
+        },
+        {
+            "id": 19,
+            "name": "Home nursing system web app",
+            "date": "2020",
+            "description": "Frontend bugfixes and smaller backend features.",
+            "userStory": "",
+            "tech": [
+                "Vue.js",
+                "PHP Laravel",
+                "MySQL"
+            ],
+            "done": true,
+            "images": [
+                "../assets/projects/nursing_1.png"
+            ],
+            "github": "",
+            "link": ""
+        },
+        {
+            "id": 20,
+            "name": "Group project",
+            "date": "2019",
+            "description": "Developing a desktop game from design to implementation in a 5 person group for a project class.",
+            "userStory": "",
+            "tech": [
+                "Java",
+                "Eclipse"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "",
+            "link": ""
+        },
+        {
+            "id": 17,
+            "name": "Oware desktop app",
+            "date": "2018",
+            "description": "Desktop application of the Oware table game for Java programming course.",
+            "userStory": "",
+            "tech": [
+                "Java",
+                "JavaFX",
+                "JUnit",
+                "Eclipse"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "https://github.com/dormico/Oware",
+            "link": ""
+        },
+        {
+            "id": 18,
+            "name": "Point and click game",
+            "date": "2017",
+            "description": "Point and click desktop game written in C++, using the SFML library.",
+            "userStory": "",
+            "tech": [
+                "C++ 98",
+                "SFML"
+            ],
+            "done": true,
+            "images": [
+                ""
+            ],
+            "github": "https://github.com/dormico/cppgame",
+            "link": ""
+        }
+    ]
+}
