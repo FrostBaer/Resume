@@ -14,7 +14,7 @@ export class ProjectsComponent implements OnInit {
   public years: string[];
   public filter: boolean[] = [];
   public year: string = "year";
-  private defaultImg: string = "../assets/projects/default.png";
+  private defaultImg: string = "../assets/projects/default.webp";
 
   constructor(private projService: ProjectsService) { }
 

@@ -13,7 +13,7 @@ import { ProjectsService } from 'src/app/services/projects.service';
 export class ProjectDetailComponent implements OnInit {
 
   public project: Project;
-  private defaultLink: string = "assets/projects/default_blur_shape.png";
+  private defaultLink: string = "assets/projects/default_blur_shape.webp";
 
   constructor(private config: NgbCarouselConfig,
     private projService: ProjectsService,
