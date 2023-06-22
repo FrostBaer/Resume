@@ -39,7 +39,6 @@ export class ProjectsComponent implements OnInit {
     this.filter = Array(this.techs.length).fill(true);
   }
   public setYear(year) {
-    console.log("year:" + year);
     this.year = year;
   }
   public getProjImage(id: number): string {
