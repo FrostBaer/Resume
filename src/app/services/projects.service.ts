@@ -24,7 +24,7 @@ export class ProjectsService {
     return proj;
   }
   public getFilteredProjects(filter?: string[], year?: string): Project[] {
-    var projectsByYear: Project[] = [];
+    let projectsByYear: Project[] = [];
     if (year != "year" && year != "ALL") {
       projects.forEach(proj => {
         if (proj.date == year) {
@@ -34,11 +34,11 @@ export class ProjectsService {
     } else {
       projectsByYear = projects;
     }
-    var filteredProjects: Project[] = [];
+    let filteredProjects: Project[] = [];
     projectsByYear.forEach(proj => {
       proj.tech.forEach(tech => {
         if (filter.some((element) => tech.toLowerCase().includes(element.toLowerCase()))) {
-          if (filteredProjects.includes(proj) == false) {
+          if (!filteredProjects.includes(proj)) {
             filteredProjects.push(proj);
           }
         }
