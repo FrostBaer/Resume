@@ -33,7 +33,7 @@ namespace Resume
             FeedResponse<Project> response = null;
 
             QueryDefinition queryDefinition = new QueryDefinition(
-                "SELECT * FROM items i");
+                "SELECT * FROM items i order by i.date desc");
             using (FeedIterator<Project> resultSet = container.GetItemQueryIterator<Project>(queryDefinition))
             {
                 while (resultSet.HasMoreResults)
