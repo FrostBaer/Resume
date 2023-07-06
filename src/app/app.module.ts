@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {ClipboardModule} from '@angular/cdk/clipboard';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
@@ -28,7 +28,7 @@ import { ThesisComponent } from './components/thesis/thesis.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule, 
+    NgbModule,
     ClipboardModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
