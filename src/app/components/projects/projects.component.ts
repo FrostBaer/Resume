@@ -30,7 +30,7 @@ export class ProjectsComponent implements OnInit {
     })
   }
   private getTechs() {
-    this.techs = ["Angular", "Azure", "C/C++", "C#", ".NET", ".NET Core", "Python", "Kotlin", "Java"];
+    this.techs = ["Angular", "Azure", "C/C++", "C#", ".NET", "Elixir", "Java", "Python", "Vue"];
   }
   private getYears() {
     this.years = ["2017", "2018", "2019", "2020", "2021", "2022", "2023", "ALL"];
