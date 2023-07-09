@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Project, ProjectResult } from '../models/project.type';
-import { projects } from '../models/mockProjects.json';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,7 +10,7 @@ export class ProjectsService {
 
   private url: string = "https://resume-func-app.azurewebsites.net/api/"
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   public getProjects(): Observable<ProjectResult> {
     let activeUrl = this.url + "GetProjects";
@@ -24,26 +23,36 @@ export class ProjectsService {
     return proj;
   }
   public getFilteredProjects(filter?: string[], year?: string): Project[] {
-    let projectsByYear: Project[] = [];
-    if (year != "year" && year != "ALL") {
-      projects.forEach(proj => {
-        if (proj.date == year) {
-          projectsByYear.push(proj);
-        }
-      });
-    } else {
-      projectsByYear = projects;
-    }
     let filteredProjects: Project[] = [];
-    projectsByYear.forEach(proj => {
-      proj.tech.forEach(tech => {
-        if (filter.some((element) => tech.toLowerCase().includes(element.toLowerCase()))) {
-          if (!filteredProjects.includes(proj)) {
-            filteredProjects.push(proj);
-          }
+    if (year != "year" && year != "ALL") {
+      this.getProjects().subscribe(
+        projectList => {
+          projectList.projects.forEach(proj => {
+            if (proj.date == year) {
+              proj.tech.forEach(tech => {
+                if (filter.some((element) => tech.toLowerCase().includes(element.toLowerCase()))) {
+                  if (!filteredProjects.includes(proj)) {
+                    filteredProjects.push(proj);
+                  }
+                }
+              });
+            }
+          });
         }
+      )
+    } else {
+      this.getProjects().subscribe(projectList => {
+        projectList.projects.forEach( proj => {
+          proj.tech.forEach(tech => {
+            if (filter.some((element) => tech.toLowerCase().includes(element.toLowerCase()))) {
+              if (!filteredProjects.includes(proj)) {
+                filteredProjects.push(proj);
+              }
+            }
+          });
+        });
       });
-    });
+    }
     return filteredProjects;
   }
 }
