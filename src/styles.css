@@ -608,3 +608,9 @@ fieldset:disabled .btn {
 .icon-50 {
   font-size: 0.5em;
 }
+
+@media (min-width: 992px) {
+  .w-lg-100 {
+    width: 100% !important;
+  }
+}

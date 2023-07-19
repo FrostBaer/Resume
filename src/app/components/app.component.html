@@ -4,20 +4,20 @@
             <div class="px-2">
                 <div id="navbarSupportedContent">
                     <ul class="nav flex-lg-column text-secondary">
-                        <li class="nav-item text-wrap">
+                        <li class="nav-item text-wrap w-lg-100">
                             <a class="nav-link display-6" [routerLink]="'/about'">About</a>
                         </li>
-                        <li class="nav-item text-wrap">
+                        <li class="nav-item text-wrap w-lg-100">
                             <a class="nav-link display-6" [routerLink]="'/resume'">Resume</a>
                         </li>
-                        <li class="nav-item text-wrap">
+                        <li class="nav-item text-wrap w-lg-100">
                             <a class="nav-link display-6" [routerLink]="'/projects'">My
                                 works</a>
                         </li>
-                        <li class="nav-item text-wrap" (click)="changeContact()">
+                        <li class="nav-item text-wrap w-lg-100" (click)="changeContact()">
                             <a class="nav-link display-6" [routerLink]="">Contact</a>
                             <div *ngIf="activeContact">
-                                <ul class="nav dropdown-menu flex-column mx-3 py-0 bg-opaque-lg border-0">
+                                <ul class="nav dropdown-menu flex-column py-0 bg-opaque-lg border-0">
                                     <li class="dropdown-item" (click)="getPhone()">
                                         <a class="text-decoration-none d-flex justify-content-center rounded-2"
                                             [routerLink]="">
