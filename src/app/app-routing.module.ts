@@ -5,10 +5,12 @@ import { ProjectDetailComponent } from './components/project-detail/project-deta
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ThesisComponent } from './components/thesis/thesis.component';
+import { ProfileLoaderComponent } from './components/profile/profile-loader.component';
 
 const routes: Routes = [  
   { path: "", component: ProfileComponent },
   { path: "about", component: ProfileComponent },
+  { path: "loader", component: ProfileLoaderComponent },
   { path: "resume", component: ResumeComponent },
   { path: "projects", component: ProjectsComponent },
   { path: "project/:id", component: ProjectDetailComponent },

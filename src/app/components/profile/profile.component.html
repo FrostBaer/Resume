@@ -1,6 +1,9 @@
-<div class="container-fluid bg-about m-0 p-0 h-100">
+<div class="container-fluid bg-about m-0 p-0 h-110">
     <div class="rounded-2 px-4 py-3">
-        <div class="row">
+        <div *ngIf="!resume">
+            <app-profile-loader></app-profile-loader>
+        </div>
+        <div *ngIf="resume" class="row">
             <div class="col col-md my-2">
                 <div class="py-2 px-4 blur-hard border-bottom border-top border-primary rounded-2">
                     <h5
@@ -22,28 +25,25 @@
                     </p>
                 </div>
                 <div *ngIf="resume"
-                    class="my-2 py-2 px-4 rounded-2 text-center fw-light border-bottom border-top border-primary blur-hard">
+                    class="my-2 pt-2 px-4 rounded-2 text-center fw-light border-bottom border-top border-primary blur-hard">
                     <div
                         class="display-7 py-2 mb-3 text-secondary rounded border-top border-bottom border-secondary bg-primary-light">
                         Preferred technologies
                     </div>
                     <div class="row">
-                        <div *ngFor="let favourite of resume.favourites" class="col my-2 card-group">
-                            <div class="card bg-opaque border-0">
-                                <div data-bs-toggle="tooltip" data-bs-placement="right" title="{{favourite.name}}">
-                                    <img class="mx-2" width="70rem" src="{{favourite.iconLink}}"
-                                        alt="{{favourite.name}}">
-                                </div>
-                                <div class="card-footer border-0 rounded-3 hide-lg bg-opaque">
-                                    <div class="card-text text-center text-secondary">{{favourite.name}}</div>
-                                </div>
+                        <div *ngFor="let favourite of resume.favourites" class="col">
+                            <div data-bs-toggle="tooltip" data-bs-placement="right" title="{{favourite.name}}">
+                                <img class="mx-2" width="70rem" src="{{favourite.iconLink}}" alt="{{favourite.name}}">
+                            </div>
+                            <div class="border-0 rounded-3 hide-lg">
+                                <div class="text-center text-secondary">{{favourite.name}}</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xs-12 col-md-4 mt-2" *ngIf="resume">
-                <div class="mx-1 text-center">
+                <div *ngIf="resume.profile" class="mx-1 text-center">
                     <img class="rounded img-fluid border border-primary" src="{{resume.profile}}" alt="profile"
                         oncontextmenu="return false;">
                 </div>
@@ -66,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="my-2" *ngIf="resume.hobbies">
+                <!-- <div class="my-2" *ngIf="resume.hobbies">
                     <div
                         class="display-8 text-center border border-primary text-secondary bg-primary-light rounded py-2 mx-1">
                         Hobbies
@@ -82,7 +82,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

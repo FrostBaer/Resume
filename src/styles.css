@@ -614,3 +614,112 @@ fieldset:disabled .btn {
     width: 100% !important;
   }
 }
+
+.placeholder {
+  display: inline-block;
+  min-height: 1em;
+  vertical-align: middle;
+  cursor: wait;
+  background-color: currentColor;
+  opacity: 0.5;
+}
+
+.placeholder.btn::before {
+  display: inline-block;
+  content: "";
+}
+
+.placeholder-xs {
+  min-height: 0.6em;
+}
+
+.placeholder-sm {
+  min-height: 0.8em;
+}
+
+.placeholder-lg {
+  min-height: 1.2em;
+}
+
+.placeholder-glow .placeholder {
+  animation: placeholder-glow 4s ease-in-out infinite;
+}
+
+@keyframes placeholder-glow {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.placeholder-wave {
+  -webkit-mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
+  mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+  animation: placeholder-wave 2s linear infinite;
+}
+
+@keyframes placeholder-wave {
+  100% {
+    -webkit-mask-position: -200% 0%;
+    mask-position: -200% 0%;
+  }
+}
+
+.placeholder-15 {
+  height: 25rem;
+}
+@media (min-width: 992px) {
+  .placeholder-15 {
+    height: 15rem;
+  }
+}
+
+.placeholder-9 {
+  height: 5rem;
+}
+@media (min-width: 992px) {
+  .placeholder-9 {
+    height: 9rem;
+  }
+}
+
+.placeholder-5 {
+  height: 5rem;
+}
+
+.placeholder-lh {
+  height: 1.5lh;
+}
+@media (min-width: 992px) {
+  .placeholder-lh {
+    height: 1lh;
+  }
+}
+
+.placeholder-lh-lg {
+  height: 2lh;
+}
+@media (min-width: 992px) {
+  .placeholder-lh-lg {
+    height: 1.5lh;
+  }
+}
+
+.placeholder-lh-xl {
+  height: 3lh;
+}
+@media (min-width: 992px) {
+  .placeholder-lh-xl {
+    height: 2.5lh;
+  }
+}
+
+.h-110 {
+  height: 110%;
+}
+@media (min-width: 992px) {
+  .h-110 {
+    height: 100%;
+  }
+}

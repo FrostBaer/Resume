@@ -1,0 +1,31 @@
+<div class="container-fluid bg-about m-0 p-0 h-100">
+    <div class="rounded-2 px-4 py-3">
+        <div class="row placeholder-wave">
+            <div class="col col-md my-2">
+                <div
+                    class="py-2 px-4 bg-primary-light border-bottom border-top border-primary rounded-2 placeholder col-12">
+                    <h5 class="card-title display-6 rounded border-top border-bottom border-secondary bg-frostberry placeholder col-12 placeholder-lh"></h5>
+                    <div class="my-2 rounded bg-primary-light placeholder-15"></div>
+                </div>
+                <div
+                    class="my-2 py-2 px-4 bg-primary-light rounded-2 text-center fw-light border-bottom border-top border-primary blur-hard placeholder col-12">
+                    <h5 class="display-6 py-2 mb-3 text-secondary rounded border-top border-bottom border-secondary bg-frostberry placeholder-lh"></h5>
+                    <div class="row">
+                        <div *ngFor="let favourite of favourites" class="col my-2 card-group">
+                            <div class="card bg-frostberry border-0 placeholder-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 mt-2">
+                <div class="rounded border border-primary placeholder col-12 bg-frostberry placeholder-9"></div>
+                <div class="my-2">
+                    <div class="display-6 border border-primary bg-primary-light rounded py-2 placeholder col-12 my-1 placeholder-lh"></div>
+                    <div class="placeholder col-12 bg-primary-light my-1 p-2 border border-primary rounded placeholder-lh-xl"
+                        *ngFor="let lang of languages">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
