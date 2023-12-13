@@ -30,7 +30,7 @@
 	"forwardPorts": [4200],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm i -g @azure/static-web-apps-cli@0.8.2"
+	"postCreateCommand": "npm i -g @azure/static-web-apps-cli@0.8.2 && npm i three && npm i @types/three@0.146.0 --save-dev"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
