@@ -56,7 +56,7 @@ export class SceneComponent implements OnInit {
     const near = 0.1;
     const far = 500;
     this.camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    this.camera.position.set(0, -5, 70);    
+    this.camera.position.set(0, -5, 90);    
 
     //Lights
     this.addLights();
@@ -121,7 +121,7 @@ export class SceneComponent implements OnInit {
   private animate() {
     requestAnimationFrame(this.animate.bind(this));
     if (this.skybox) {
-      this.skybox.rotation.y += 0.0001;
+      this.skybox.rotation.y -= 0.0001;
     }
     if (this.snowSmall) {
       this.snowSmall.move();

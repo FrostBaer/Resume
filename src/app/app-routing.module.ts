@@ -6,9 +6,10 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ThesisComponent } from './components/thesis/thesis.component';
 import { ProfileLoaderComponent } from './components/profile/profile-loader.component';
+import { SceneComponent } from './components/scene/scene.component';
 
 const routes: Routes = [  
-  { path: "", component: ProfileComponent },
+  { path: "", component: SceneComponent },
   { path: "about", component: ProfileComponent },
   { path: "loader", component: ProfileLoaderComponent },
   { path: "resume", component: ResumeComponent },
