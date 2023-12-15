@@ -1,6 +1,6 @@
-<div class="d-flex h-100">
-    <canvas class="h-100 w-100" id="scene"></canvas>
-    <main>
+<div h-100 position-relative">
+    <canvas class="h-100 w-100 position-absolute" id="scene"></canvas>
+    <main class="h-100 w-100 position-absolute">
         <div (mouseover)="rotateLeft = true" (mouseleave)="rotateLeft = false"><<</div>
         <div (mouseover)="rotateRight = true" (mouseleave)="rotateRight = false">>></div>
     </main>
