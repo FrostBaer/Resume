@@ -10,8 +10,7 @@ import { SceneComponent } from './components/scene/scene.component';
 
 const routes: Routes = [  
   { path: "", component: SceneComponent },
-  { path: "about", component: ProfileComponent },
-  { path: "loader", component: ProfileLoaderComponent },
+  { path: "about", component: SceneComponent },
   { path: "resume", component: ResumeComponent },
   { path: "projects", component: ProjectsComponent },
   { path: "project/:id", component: ProjectDetailComponent },

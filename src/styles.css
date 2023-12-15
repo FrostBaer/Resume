@@ -560,6 +560,27 @@ fieldset:disabled .btn {
   box-shadow: 0 0 0 0.25rem rgb(7, 136, 156);
 }
 
+.arrow {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--bs-secondary);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .arrow {
+    transition: none;
+  }
+}
+
+.arrow:hover,
+.arrow:focus {
+  color: var(--bs-secondary);
+}
+
 .form-check-input:checked {
   background-color: var(--bs-secondary);
   border-color: var(--bs-dark);
@@ -724,10 +745,10 @@ fieldset:disabled .btn {
   }
 }
 
-.z-plus {
-  z-index: 10;
+.position-absolute {
+  position: absolute;
 }
 
-.z-minus {
-  z-index: -10;
+.position-relative {
+  position: relative; 
 }

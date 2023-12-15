@@ -17,6 +17,7 @@ export class SceneComponent implements OnInit {
   title = 'Drawing...';
   public rotateLeft: boolean = false;
   public rotateRight: boolean = false;
+  public lightUp: boolean = false;
 
   public container: any;
   public renderer: any;
@@ -28,6 +29,8 @@ export class SceneComponent implements OnInit {
   public snowSmall!: Snow;
   public snowMedium!: Snow;
   public snowLarge!: Snow;
+  private ambientLight: any;
+
 
   constructor() {
     this.scene = new THREE.Scene();
@@ -56,7 +59,7 @@ export class SceneComponent implements OnInit {
     const near = 0.1;
     const far = 500;
     this.camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    this.camera.position.set(0, -5, 90);    
+    this.camera.position.set(0, -5, 110);    
 
     //Lights
     this.addLights();
@@ -81,14 +84,21 @@ export class SceneComponent implements OnInit {
   }
 
   private addLights() {
-    const ambient = new THREE.AmbientLight(0x404040, 20);
+    this.ambientLight = new THREE.AmbientLight(0x404040, 20);
 
     const spotLight = new THREE.SpotLight(0xffffff, 1000, 1000, Math.PI/3, 0, 1.5);
     spotLight.position.set(0,100,0);
     spotLight.castShadow = true;
     const lightHelper = new THREE.SpotLightHelper(spotLight);
 
-    this.scene.add(ambient);
+    this.scene.add(this.ambientLight);
+  }
+
+  public setLight(intensity: number){
+    if(this.ambientLight){
+      this.ambientLight.intensity = intensity;
+      this.lightUp = !this.lightUp;
+    }
   }
 
   private loadGltfModel(path: string) {
@@ -140,6 +150,6 @@ export class SceneComponent implements OnInit {
     }
     //controls.update();
     this.renderer.render(this.scene, this.camera);
-    
+
   }
 }

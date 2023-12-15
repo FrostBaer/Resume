@@ -1,7 +1,8 @@
-<div class="container-fluid bg-about m-0 p-0 h-110">
-    <div class="rounded-2 px-4 py-3">
+<div class="container-fluid m-0 p-0 h-110">
+    <div class="rounded-2 px-4 py-3 bg-opaque h-100 w-100">
         <div *ngIf="!resume">
-            <app-profile-loader></app-profile-loader>
+            Loading...
+            <!--<app-profile-loader></app-profile-loader>-->
         </div>
         <div *ngIf="resume" class="row">
             <div class="col col-md my-2">
