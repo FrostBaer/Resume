@@ -6,12 +6,12 @@
                 <a class="btn p-3 dropdown-toggle bg-light text-secondary border border-primary"
                     data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Technologies</a>
                 <div class="dropdown-menu py-0">
-                    <div *ngFor="let tech of techs">
+                    <div *ngFor="let tech of techs; index as i">
                         <a class="dropdown-item bg-light text-secondary">
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked{{i}}"
                                     [checked]="!isChecked()" (click)="changeTechState(tech)">
-                                <label class="form-check-label" for="flexSwitchCheckChecked">{{tech}}</label>
+                                <label class="form-check-label" for="flexSwitchCheckChecked{{i}}">{{tech}}</label>
                             </div>
                         </a>
                     </div>

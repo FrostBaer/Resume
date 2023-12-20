@@ -16,6 +16,7 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { ThesisComponent } from './components/thesis/thesis.component';
 import { ProfileLoaderComponent } from './components/profile/profile-loader.component';
 import { SceneComponent } from './components/scene/scene.component';
+import { LightComponent } from './components/light/light.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SceneComponent } from './components/scene/scene.component';
     ResumeComponent,
     ThesisComponent,
     ProfileLoaderComponent,
-    SceneComponent
+    SceneComponent,
+    LightComponent
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,12 @@
 <div class="position-relative h-100 w-100">
-    <canvas class="h-100 w-100 position-absolute" id="scene"></canvas>
-    <main class="h-100 w-100 d-flex justify-content-between position-absoulte">
-        <div class="arrow rounded-2 align-items-center" (mouseover)="rotateLeft = true" (mouseleave)="rotateLeft = false">
-            <button *ngIf="lightUp" (click)="setLight(20)">Éjjel!</button>
-            <button *ngIf="!lightUp" (click)="setLight(70)">Nappal!</button>
+    <canvas class="h-100 w-100 position-absolute container-fluid  px-0 scene"></canvas>
+    <div *ngIf="loader">
+        <app-profile-loader></app-profile-loader>
+    </div>
+    <main *ngIf="!loader" class="h-100 d-flex justify-content-between position-absoulte">
+        <div class="arrow rounded-2 align-items-center" (mouseover)="rotateLeft(true)" (mouseleave)="rotateLeft(false)">
         </div>
-        
         <div><app-profile></app-profile></div>
-        <div class="arrow rounded-2" (mouseover)="rotateRight = true" (mouseleave)="rotateRight = false"></div>
+        <div class="arrow rounded-2" (mouseover)="rotateRight(true)" (mouseleave)="rotateRight(false)"></div>
     </main>
 </div>

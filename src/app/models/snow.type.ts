@@ -32,7 +32,7 @@ export class Snow {
         const snowflake = new THREE.Mesh(geometry, material);
         // Random position for snowflake
         let coord: Coordinate = {
-            x: THREE.MathUtils.randFloatSpread(120),
+            x: THREE.MathUtils.randFloatSpread(140),
             y: THREE.MathUtils.randFloatSpread(100),
             z: THREE.MathUtils.randFloat(-60, -10)
         }
@@ -42,9 +42,13 @@ export class Snow {
         this._flakes.push(new SnowFlake(snowflake, coord, phi));
     }
 
+    public destroy(){
+        this._flakes = null;
+    }
+
     public move() {
         this._flakes.forEach(flake => {
-            if (flake.mesh.position.y < -50) {
+            if (flake.mesh.position.y < -70) {
                 flake.mesh.position.y = 50;
             } else {
                 flake.mesh.position.y -= this.speed;
