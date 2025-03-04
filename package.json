@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "build-prod": "ng build --configuration production",
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && ng serve --open",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && ng build",
+    "build-prod": "export NODE_OPTIONS=--openssl-legacy-provider && ng build --configuration production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -44,7 +44,6 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.1102.19",
-    "@angular/cli": "^11.2.19",
     "@angular/compiler-cli": "~11.2.12",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.20.55",

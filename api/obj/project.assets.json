@@ -7677,34 +7677,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Orsi\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/home/witty/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Orsi\\Desktop\\angular\\angular-online-CV\\api\\resume-microservice.csproj",
+      "projectUniqueName": "/home/witty/Desktop/coding/Resume/api/resume-microservice.csproj",
       "projectName": "resume-microservice",
-      "projectPath": "C:\\Users\\Orsi\\Desktop\\angular\\angular-online-CV\\api\\resume-microservice.csproj",
-      "packagesPath": "C:\\Users\\Orsi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Orsi\\Desktop\\angular\\angular-online-CV\\api\\obj\\",
+      "projectPath": "/home/witty/Desktop/coding/Resume/api/resume-microservice.csproj",
+      "packagesPath": "/home/witty/.nuget/packages/",
+      "outputPath": "/home/witty/Desktop/coding/Resume/api/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Orsi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/home/witty/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7755,7 +7745,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.136/RuntimeIdentifierGraph.json"
       }
     }
   },
