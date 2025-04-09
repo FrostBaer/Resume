@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ProfileService } from '../services/profile.service';
 import { Clipboard } from '@angular/cdk/clipboard';
 import { ToastrService } from 'ngx-toastr';
+import { ResumeService } from '../services/resume.service';
 
 @Component({
   selector: 'app-root',
@@ -9,16 +10,23 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: []
 })
 export class AppComponent {
-  phone: string = "assets/icons/telephone.svg";
-  mail: string = "assets/icons/mail.svg";
   activeContact = false;
+  data = false;
+  public isCollapsed = false;
 
-  constructor(private profileService: ProfileService,
-    private clipboard: Clipboard,
-    private toastr: ToastrService) { }
+  constructor(
+    private readonly profileService: ProfileService,
+    private readonly resumeService: ResumeService,
+    private readonly clipboard: Clipboard,
+    private readonly toastr: ToastrService
+  ) {}
+
+  ngOnInit(): void {
+    this.getData();
+  }
 
   changeContact() {
-    this.activeContact = this.activeContact ? false : true;
+    this.activeContact = !this.activeContact;
   }
 
   getPhone() {
@@ -29,5 +37,15 @@ export class AppComponent {
   getEmail() {
     this.clipboard.copy(this.profileService.contactData.email);
     this.toastr.info('E-mail copied to clipboard!');
+  }
+
+  private getData(): void {
+    try {
+      this.resumeService.getResume().subscribe((r) => {
+        this.data = true;
+      });
+    } catch (error) {
+      console.error(error);
+    }
   }
 }

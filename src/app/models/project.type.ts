@@ -13,3 +13,7 @@ export interface Project {
 export interface ProjectResult {
     projects: Project[]
 }
+
+export interface Dict {
+    [key: string]: boolean;
+}

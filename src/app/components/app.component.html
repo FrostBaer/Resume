@@ -1,46 +1,36 @@
-<div class="container-fluid">
-    <div class="row">
-        <nav class="col-md-12 col-lg-2 px-0 sticky-top bg-frostberry navbar navbar-expand-md sidebar-md sidebar-lg">
-            <div class="px-2">
-                <div id="navbarSupportedContent">
-                    <ul class="nav flex-lg-column text-secondary">
-                        <li class="nav-item text-wrap w-lg-100">
-                            <a class="nav-link display-6" [routerLink]="'/about'">About</a>
-                        </li>
-                        <li class="nav-item text-wrap w-lg-100">
-                            <a class="nav-link display-6" [routerLink]="'/resume'">Resume</a>
-                        </li>
-                        <li class="nav-item text-wrap w-lg-100">
-                            <a class="nav-link display-6" [routerLink]="'/projects'">My
-                                works</a>
-                        </li>
-                        <li class="nav-item text-wrap w-lg-100" (click)="changeContact()">
-                            <a class="nav-link display-6" [routerLink]="">Contact</a>
-                            <div *ngIf="activeContact">
-                                <ul class="nav dropdown-menu flex-column py-0 bg-opaque-lg border-0">
-                                    <li class="dropdown-item" (click)="getPhone()">
-                                        <a class="text-decoration-none d-flex justify-content-center rounded-2"
-                                            [routerLink]="">
-                                            <i class="bi bi-telephone icon-125"></i>
-                                            <span class="mx-2 my-1">Phone</span>
-                                        </a>
-                                    </li>
-                                    <li class="dropdown-item" (click)="getEmail()">
-                                        <a class="text-decoration-none d-flex justify-content-center rounded-2"
-                                            [routerLink]="">
-                                            <i class="bi bi-envelope icon-125"></i>
-                                            <span class="mx-2 my-1">E-mail</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="col-md-12 col-lg-10 min-vh-100 p-0">
-                <router-outlet></router-outlet>
-        </div>
+<div *ngIf="data" class="container-fluid">
+  <div 
+  class="row">
+    <nav
+      class="col-md-12 col-lg-2 px-0 sticky-top navbar navbar-expand-md sidebar-lg"
+    >
+      <div class="gradient-bg"></div>
+      <div class="px-2">
+        <ul class="nav flex-lg-column text-secondary">
+          <li class="nav-item text-wrap w-lg-100">
+            <a class="nav-link-2 wave-underline" [routerLink]="'/about'"
+              >About</a
+            >
+          </li>
+          <li class="nav-item text-wrap w-lg-100">
+            <a class="nav-link-2 wave-underline" [routerLink]="'/resume'"
+              >Resume</a
+            >
+          </li>
+          <li class="nav-item text-wrap w-lg-100">
+            <a class="nav-link-2 wave-underline" [routerLink]="'/projects'"
+              >My works</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div 
+    class="col-md-12 col-lg-10 min-vh-100 p-0">
+      <router-outlet></router-outlet>
     </div>
+  </div>
+</div>
+<div *ngIf="!data" class="loading-screen">
+  <div class="loading-square"></div>
 </div>
