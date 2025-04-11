@@ -48,5 +48,3 @@ jobs:
           app_location: "/"
           api_location: "/api"
           output_location: "/docs"
-        env:  
-          CUSTOM_BUILD_COMMAND: 'npm ci && npm run build-prod' 

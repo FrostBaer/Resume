@@ -16,6 +16,8 @@
     "npm": "10.2.4"
   },
   "dependencies": {
+    "@angular-devkit/build-angular": "^0.1102.19",
+    "@angular/compiler-cli": "~11.2.12",
     "@angular/animations": "~11.2.12",
     "@angular/cdk": "^11.2.13",
     "@angular/common": "~11.2.12",
@@ -40,9 +42,7 @@
     "tslib": "^2.5.3",
     "zone.js": "^0.11.8"
   },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1102.19",
-    "@angular/compiler-cli": "~11.2.12",
+  "devDependencies": {    
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.20.55",
     "codelyzer": "^6.0.0",
