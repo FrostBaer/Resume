@@ -49,6 +49,4 @@ jobs:
           api_location: "/api"
           output_location: "/docs"
         env:  
-          DISABLE_NODEJS_BUILD: true
-          CUSTOM_BUILD_COMMAND: 'npm ci' 
-          RUN_BUILD_COMMAND: 'npm run build-prod' 
+          CUSTOM_BUILD_COMMAND: 'npm ci && npm run build-prod' 
