@@ -7,7 +7,6 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './components/app.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -37,8 +36,7 @@ import { ThesisComponent } from './components/thesis/thesis.component';
       preventDuplicates: true,
       maxOpened: 1,
       autoDismiss: true
-    }),
-    FontAwesomeModule
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
