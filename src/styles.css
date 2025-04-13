@@ -902,17 +902,18 @@ fieldset:disabled .btn {
   }
 }
 
+/*////////////// Projects List ////////////*/
 .masonry-layout {
   columns: 3;
   column-gap: 3rem;
-  div {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-  }
-  span {
-    width: fit-content;
-  }
+}
+.masonry-layout div {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+.masonry-layout span {
+  width: fit-content;
 }
 @media (max-width: 1500px) {
   .masonry-layout {
@@ -937,7 +938,7 @@ fieldset:disabled .btn {
   border-bottom: var(--bs-secondary) 0.2rem solid;
   border-radius: 0%;
 }
-
+/*////////////// !Projects List ////////////*/
 /*////////////// Project Detail ////////////*/
 .project-detail {
   position: fixed;
