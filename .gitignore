@@ -10,6 +10,9 @@
 # Angular specific
 /.angular
 
+# .NET specific
+/api/obj
+
 # dependencies
 /node_modules
 
