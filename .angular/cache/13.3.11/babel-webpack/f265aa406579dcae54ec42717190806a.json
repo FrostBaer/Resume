@@ -1,1 +1,0 @@
-{"ast":null,"code":"import { trigger, style, animate, transition } from '@angular/animations';\nexport const componentAnimation = trigger('componentAnimation', [transition(':enter', [style({\n  opacity: 0,\n  transform: 'translateY(-1%)'\n}), animate('400ms ease-in', style({\n  opacity: 1,\n  transform: 'translateY(0)'\n}))])]);","map":null,"metadata":{},"sourceType":"module"}
