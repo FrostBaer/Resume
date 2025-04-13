@@ -1,0 +1,29 @@
+{
+  "generatedBy": "Microsoft.NET.Sdk.Functions.Generator-4.1.1",
+  "configurationSource": "attributes",
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "route": "GetProjectById/{id}",
+      "methods": [
+        "get",
+        "post"
+      ],
+      "authLevel": "anonymous",
+      "name": "req"
+    },
+    {
+      "type": "cosmosDB",
+      "connection": "CosmosDBConnectionString",
+      "id": "{id}",
+      "partitionKey": "{id}",
+      "databaseName": "Resume",
+      "containerName": "projects",
+      "createIfNotExists": false,
+      "name": "project"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "../bin/resume-microservice.dll",
+  "entryPoint": "Resume.GetProjectById.Run"
+}

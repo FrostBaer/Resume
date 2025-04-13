@@ -8,9 +8,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ResumeService {
 
-  private url: string = "https://resume-func-app.azurewebsites.net/api/"
+  private readonly url: string = "https://resume-func-app.azurewebsites.net/api/"
   
-  constructor(private http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
   public getResume() : Observable<Resume> {
     let activeUrl = this.url + "GetResume";
