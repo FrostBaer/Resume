@@ -34,7 +34,7 @@
               </div>
               <div class="text-secondary">
                 <div
-                  class="my-2 p-2 border border-primary rounded blur-hard"
+                  class="my-2 p-2 border border rounded bg-light"
                   *ngFor="let lang of resume.languages"
                 >
                   <div class="row">
@@ -56,7 +56,7 @@
               </div>
               <div class="text-primary row my-2 mx-1 rounded">
                 <div
-                  class="py-2 m-1 border border-primary text-secondary rounded text-center col blur-hard d-flex flex-column justify-content-center"
+                  class="py-2 m-1 border border text-secondary rounded text-center col bg-light d-flex flex-column justify-content-center"
                   *ngFor="let hobby of resume.hobbies"
                 >
                   <div>
@@ -108,7 +108,7 @@
           class="col-md-6 mt-5 mb-2 card-group"
           *ngFor="let proj of projects"
         >
-          <div class="card-hover-animation">
+          <div class="">
             <img
               class="card-img-top"
               src="{{ proj.images[0] }}"
