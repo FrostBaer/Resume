@@ -31,9 +31,9 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
-  --bs-body-font-family: Nunito, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-family: Roboto Light, Nunito, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -51,7 +51,8 @@ body {
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-gray);
-  -webkit-text-size-adjust: 100%;
+  /* text-size-adjust: 100%; */
+  /* -webkit-text-size-adjust: 100%; */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /* overflow-x: hidden; */
 }
@@ -299,15 +300,6 @@ body {
   }
 }
 
-.bg-about-2 {
-  padding: 10rem 0;
-  background-color: var(--bs-gray);
-  background-position: center;
-  background-repeat: repeat-y;
-  background-attachment: scroll;
-  background-size: cover;
-}
-
 .bg-gray {
   background: var(--bs-gray);
 }
@@ -463,18 +455,20 @@ body {
   position: relative;
   display: block;
   padding: 1rem 1rem;
-  color: var(--bs-secondary-rgb);
+  color: rgba(var(--bs-secondary-rgb), 0.8);
   text-decoration: none;
   font-family: "Moirai One", system-ui;
   font-weight: 800;
   font-style: normal;
   font-size: 2em;
   line-height: 1.2;
-  transition: color 0.35s ease-in-out;
+  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+  transition: color 0.35s ease-in-out, filter 0.35s ease-in-out;
 }
 
 .nav-link-2:hover {
-  color: rgba(var(--bs-secondary-rgb), 0.85);
+  filter: drop-shadow(0px 5px 2px rgba(var(--bs-secondary-rgb), 0.7));
+  color: rgba(var(--bs-secondary-rgb), 1);
 }
 
 .wave-underline {
@@ -669,20 +663,21 @@ fieldset:disabled .btn {
   position: absolute;
   z-index: 1;
   font-size: 7em;
-  top: -0.97em;
+  top: -1.05em;
   left: 5%;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
 }
 
 .subtitle {
   position: absolute;
   z-index: 1;
-  font-size: 3.5em;
-  top: -1.2em;
-  left: 3%;
+  font-size: 4.5em;
+  top: -0.88em;
+  left: 5%;
   width: fit-content;
   text-align: start;
 }
-
 @media (max-width: 550px) {
   .subtitle {
     font-size: 2em;
@@ -704,9 +699,45 @@ fieldset:disabled .btn {
   -webkit-text-fill-color: transparent;
 }
 
+.gradient-zain {
+  background: -webkit-linear-gradient(
+    270deg,
+    var(--bs-secondary) 58%,
+    var(--bs-primary) 58%
+  );
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@font-face {
+  font-family: "Moirai One";
+  font-style: normal;
+  src: url("assets/fonts/MoiraiOne-Regular.ttf") format("truetype");
+}
 .moirai {
   font-family: "Moirai One", system-ui;
   font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Zain";
+  font-style: normal;
+  src: url("assets/fonts/Zain-ExtraLight.ttf") format("truetype");
+}
+.zain {
+  font-family: "Zain", system-ui;
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto Light";
+  font-style: normal;
+  src: url("assets/fonts/Roboto-Light.ttf") format("truetype");
+}
+.roboto-light {
+  font-family: "Roboto Light", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -823,13 +854,18 @@ fieldset:disabled .btn {
   z-index: 10;
   height: 100vh;
   transition: all 0.3s;
-  border-right: var(--bs-primary) 1rem solid;
+  border-right: var(--bs-primary) 0.5rem solid;
   font-size: 1.2rem;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   .sidebar-lg {
-    font-size: .9rem;
-    border-right: var(--bs-primary) .5rem solid;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1300px) {
+  .sidebar-lg {
+    font-size: 0.8rem;
+    border-right: var(--bs-primary) 0.3rem solid;
   }
 }
 @media (max-width: 991px) {
@@ -911,6 +947,7 @@ fieldset:disabled .btn {
   display: inline-block;
   width: 100%;
   text-align: center;
+  cursor: pointer;
 }
 .masonry-layout span {
   width: fit-content;
@@ -997,8 +1034,7 @@ body.project-detail-open {
 .img-main {
   justify-content: center;
   border: none;
-  width: 100%;
-  height: 100%;
+  height: 100%; 
   object-fit: contain;
   filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
   transition: filter 0.5s ease-in-out;

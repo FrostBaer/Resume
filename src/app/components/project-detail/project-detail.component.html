@@ -1,18 +1,31 @@
 <div *ngIf="project" class="border-0 container-fluid">
   <div class="gallery row">
-    <div *ngIf="getSlides().length > 1" class="col-lg-3 col-md-12 slide-container row-md">
-      <div *ngFor="let slide of getSlides()" (click)="activeSlide = slide" class="p-3">
-        <img [src]="slide" alt="Slide" class="img-detail"/>
+    <div
+      *ngIf="getSlides().length > 1"
+      class="col-lg-3 col-md-12 slide-container row-md"
+    >
+      <div
+        *ngFor="let slide of getSlides()"
+        (click)="activeSlide = slide"
+        class="p-3"
+      >
+        <img [src]="slide" alt="Slide" class="img-detail" />
       </div>
     </div>
-    <div *ngIf="activeSlide" (click)="isFullScreen = !isFullScreen" class="col slide-container">
-      <img [src]="activeSlide" alt="Slide" class="img-main" [@fullScreen]="isFullScreen" />
+    <div *ngIf="activeSlide" class="col slide-container">
+        <img
+          [src]="activeSlide"
+          alt=""
+          (click)="isFullScreen = !isFullScreen"
+          class="img-main"
+          [@fullScreen]="isFullScreen"
+        />
     </div>
   </div>
 
   <div class="mt-5 mx-5">
     <h5 class="py-4 display-7 text-center m-0 pb-2">{{ project.name }}</h5>
-    <p class="text-muted fw-light mt-0">{{project.date}}</p>
+    <p class="text-muted fw-light mt-0">{{ project.date }}</p>
     <div class="card-text text-center fw-light">{{ project.description }}</div>
     <div *ngIf="project.userStory" class="card-text text-center fw-light my-2">
       <span>User story:</span>

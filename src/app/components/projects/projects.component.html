@@ -12,13 +12,13 @@
       >
         <span
           *ngIf="isChecked(tech); else unlistedProj"
-          class="button-shadow-animation mx-2 badge my-1 p-2 bg-primary text-secondary border border-2 border-secondary moirai fs-5"
+          class="button-shadow-animation mx-2 badge my-1 p-2 bg-primary text-secondary border border-2 border-secondary roboto-light fs-6"
         >
           {{ tech }}
         </span>
         <ng-template #unlistedProj>
           <span
-            class="button-shadow-animation mx-2 badge my-1 p-2 bg-gray text-secondary rounded-1 border border-2 border-secondary moirai fs-5"
+            class="button-shadow-animation mx-2 badge my-1 p-2 bg-gray text-secondary rounded-1 border border-2 border-secondary roboto-light fs-6"
           >
             {{ tech }}
           </span>
@@ -46,8 +46,8 @@
   </nav>
   <div class="masonry-layout">
     <div *ngFor="let project of projects" class="mb-4 mb-lg-0">
-      <div class="w-100 rounded mb-4 card-hover-animation">
-        <a (click)="projectOpened(project)">
+      <div (click)="projectOpened(project)" class="w-100 rounded mb-4 card-hover-animation">
+        <a>
           <img
             class="card-img-top project-img w-100 mb-3 rounded mx-auto"
             [src]="getProjImage(project.id)"
@@ -71,10 +71,10 @@
           </div>
         </div>
         <div class="card-footer rounded-bottom p-1 pt-0 bg-header border-0">
-          <div
-            class="card-text text-center text-secondary blur-hard rounded-bottom p-1"
-          >
-            {{ project.date }}
+          <div class="bg-gray rounded-bottom">
+            <div class="card-text text-center text-secondary rounded-bottom">
+              {{ project.date }}
+            </div>
           </div>
         </div>
       </div>
@@ -84,9 +84,13 @@
     <div class="loading-square"></div>
   </div>
 </div>
-<div *ngIf="openedProject" class="project-detail bg-primary-light" [@openCloseAnimation]>
-  <div class="close-button">
-    <div type="button" aria-label="Close" (click)="projectClosed()">
+<div
+  *ngIf="openedProject"
+  class="project-detail bg-primary-light"
+  [@openCloseAnimation]
+>
+  <div (click)="projectClosed()" class="close-button">
+    <div type="button" aria-label="Close">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="32"
