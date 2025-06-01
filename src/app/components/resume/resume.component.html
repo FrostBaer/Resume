@@ -13,7 +13,9 @@
             </a> -->
     </div>
   </div>
-  <div class="d-flex justify-content-end bg-light rounded-2 border p-2 mt-2 zain">
+  <div
+    class="d-flex justify-content-end bg-light rounded-2 border p-2 mt-2 zain"
+  >
     <a href="https://github.com/FrostBaer" target="_blank" class="mx-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -82,11 +84,7 @@
   </div>
   <div class="p-2">
     <div *ngIf="resume.progLanguages">
-      <div
-        class="display-6 text-center my-2 p-2"
-      >
-        Programming languages
-      </div>
+      <div class="display-6 text-center my-2 p-2">Programming languages</div>
       <div class="row mt-auto my-2">
         <div class="text-primary row rounded">
           <div class="col" *ngFor="let prog of resume.progLanguages">
@@ -129,11 +127,7 @@
       </div>
     </div>
     <div *ngIf="resume.frameworks">
-      <div
-        class="display-6 text-center mt-4 mb-2 p-2"
-      >
-        Frameworks
-      </div>
+      <div class="display-6 text-center mt-4 mb-2 p-2">Frameworks</div>
       <div class="row mt-auto my-2">
         <div class="text-primary row rounded">
           <div class="col" *ngFor="let frame of resume.frameworks">
@@ -175,35 +169,29 @@
         </div>
       </div>
     </div>
-    <div *ngIf="resume.concepts" class="bg-light rounded-2 border mt-4">
-      <div
-        class="display-6 text-center my-2 p-2"
-      >
-        Concepts & tech
-      </div>
-      <div class="row mt-auto mx-1 my-2">
-        <span
-          class="text-center fw-light m-2 py-2 badge bg-gray text-secondary border col"
-          *ngFor="let concept of resume.concepts"
-        >
-          {{ concept }}
-        </span>
-      </div>
-      <div class="row mt-auto mx-1 my-2">
-        <span
-          class="text-center fw-light m-2 py-2 badge bg-gray text-secondary border col"
-          *ngFor="let tech of resume.other"
-        >
-          {{ tech }}
-        </span>
+    <div *ngIf="resume.concepts" class="bg-decoration rounded-2 mt-4 border">
+      <div class="">
+        <div class="display-6 text-center my-2 p-2">Concepts & tech</div>
+        <div class="row mt-auto mx-1 my-2">
+          <span
+            class="text-center fw-light m-2 py-2 badge bg-gray text-secondary border col"
+            *ngFor="let concept of resume.concepts"
+          >
+            {{ concept }}
+          </span>
+        </div>
+        <div class="row mt-auto mx-1 my-2">
+          <span
+            class="text-center fw-light m-2 py-2 badge bg-gray text-secondary border col"
+            *ngFor="let tech of resume.other"
+          >
+            {{ tech }}
+          </span>
+        </div>
       </div>
     </div>
     <div *ngIf="resume.software">
-      <div
-        class="display-6 text-center mt-4 mb-2 p-2"
-      >
-        Software knowledge
-      </div>
+      <div class="display-6 text-center mt-4 mb-2 p-2">Software knowledge</div>
       <div class="row mt-auto my-2">
         <div class="text-primary row my-2 mx-1 rounded">
           <div
@@ -221,9 +209,7 @@
       </div>
     </div>
     <div *ngIf="resume.jobs">
-      <div
-        class="display-6 text-center mt-4 mb-2 p-2"
-      >
+      <div class="display-6 text-center mt-4 mb-2 p-2">
         Workplace experience
       </div>
       <div class="row mt-auto my-2">

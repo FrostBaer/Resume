@@ -1,0 +1,41 @@
+{
+    "updates": [
+        {
+            "id": "6",
+            "date": "2025 05",
+            "title": "Invoice categorizer app (in progress)",
+            "content": "Started working on an invoice reader application using the Azure AI Vision OCR service. My goal is to create an app to automatically read and categorize my invoices and be able to determine how much was spent on different categories based on charts. The application will allow users to upload photos of invoices from their phones, extract relevant data using OCR, and display the results in a user-friendly interface. The goal is to create a tool that simplifies invoice management and improves productivity."
+        },
+        {
+            "id": "5",
+            "date": "2025 05",
+            "title": "Personal Website Update (this website)",
+            "content": "Updated project from Angular 11 to 13 and resolved compatibility issues with GitHub Actions' Oryx builder. Added new features such as new components, improved UI, and CSS animations. Updated site content to reflect recent projects and skills. As a next step I plan to update the API as .NET 6 reached the end of official support. Some of the functions also became redundant or lacking because of changes on the frontend."
+        },
+        {
+            "id": "4",
+            "date": "2025 04",
+            "title": "Resume Website Update",
+            "content": "Reworked the website layout to improve user experience. Added CSS animations and requested features such as Scroll to top button and a News component, updated Navigation Bar behaviour. Updated the documentation to reflect the latest changes.",
+            "link": "https://juhosattila.github.io/"
+        },
+        {
+            "id": "3",
+            "date": "2025 04",
+            "title": "LOVE2D Game (in progress)",
+            "content": "Developing a small game to test LOVE2D, a 2D Lua framework. The idea was to create a simple Froggie Cross the Road game with basic physics and collision detection. The game features a player character that can jump and move left or right, with obstacles and collectibles. Inspired by the Primeagean's stream, where they developed a game in five days, using the same game engine."
+        },
+        {
+            "id": "2",
+            "date": "2025 03",
+            "title": "RIVE animations demo project",
+            "content": "Explored RIVE animations, a powerful tool for creating interactive animations. I created a demo project that showcases various RIVE animations, including character animations and UI transitions. The project helped me understand how to integrate RIVE animations into web applications and enhance user experience."
+        },
+        {
+            "id": "1",
+            "date": "2025 03",
+            "title": "CSS animations demo project",
+            "content": "Took a closer look to CSS animations, since I've never learned it officially. I created a simple website to showcase various CSS animations, including hover effects, transitions, and keyframe animations. The project helped me understand how to create smooth and engaging user interfaces using CSS alone."
+        }
+    ]
+}

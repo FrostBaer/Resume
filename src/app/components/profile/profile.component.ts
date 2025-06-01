@@ -4,6 +4,7 @@ import { ResumeService } from 'src/app/services/resume.service';
 import { Project } from 'src/app/models/project.type';
 import { ProjectsService } from 'src/app/services/projects.service';
 import { componentAnimation } from 'src/app/animations/component-animation';
+import { Update } from 'src/app/models/updates.type';
 
 @Component({
   selector: 'app-profile',
@@ -14,16 +15,18 @@ import { componentAnimation } from 'src/app/animations/component-animation';
 export class ProfileComponent implements OnInit {
 
   public resume: Resume;
-  public projects: Project[];
+  public updates: Update[];
+  // public projects: Project[];
 
   constructor(
     private readonly resumeService: ResumeService,
-    private readonly projService: ProjectsService
+    // private readonly projService: ProjectsService
   ) {}
 
   ngOnInit(): void {
     this.getResume();
-    this.getProjects();
+    //this.getProjects();
+    this.getUpdates();
   }
 
   private getResume(): void {
@@ -31,9 +34,14 @@ export class ProfileComponent implements OnInit {
       this.resume = r;
     });
   }
-  private getProjects() {
-    this.projService.getProjects().subscribe((proj) => {
-      this.projects = proj.projects.slice(0, 3);
+  // private getProjects() {
+  //   this.projService.getProjects().subscribe((proj) => {
+  //     this.projects = proj.projects.slice(0, 3);
+  //   });
+  // }
+  private getUpdates(): void {
+    this.resumeService.getUpdates().subscribe((updates) => {
+      this.updates = updates;
     });
   }
 }

@@ -4,9 +4,7 @@
     <div class="rounded-2 px-4 py-3">
       <div class="row">
         <div class="col col-md my-2">
-          <div
-            class="py-2 px-4 border-top border-primary border-3"
-          >
+          <div class="py-2 px-4 border-top border-primary border-3">
             <div class="title-container">
               <h1 class="moirai title">
                 <span class="gradient-text">Hello!</span>
@@ -100,27 +98,38 @@
         </div>
       </div>
     </div>
-    <div class="vertical-space-10"></div>
+    <div class="vertical-space-20"></div>
     <div class="px-4 pb-3">
-      <div class="row border-top border-3 border-primary mt-5 mx-3 title-container">
-        <span class="subtitle gradient-zain zain">Latest projects</span>
-        <div
-          class="col-md-6 mt-5 mb-2 card-group"
-          *ngFor="let proj of projects"
-        >
-          <div class="">
-            <img
-              class="card-img-top"
-              src="{{ proj.images[0] }}"
-              alt="Card cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">{{ proj.name }}</h5>
-              <p class="card-text">{{ proj.description }}</p>
-              <!-- <a href="{{ proj.link }}" class="btn btn-primary"
-                >Go to project</a
-              > -->
-            </div>
+      <div class="row border-top border-3 border-primary mx-3 title-container">
+        <span class="subtitle gradient-subtitle moirai">Updates</span>
+        <div class="mt-5 mb-2 card-group" *ngFor="let update of updates">
+          <div>
+            <span class="zain fs-5 mx-2">{{ update.title }}</span>
+            <a
+              *ngIf="update.link"
+              href="{{ update.link }}"
+              target="_blank"
+              class="me-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-box-arrow-up-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"
+                /></svg
+            ></a>
+            <span>{{ update.content }}</span>
+            <div class="zain d-flex justify-content-end">{{ update.date }}</div>
           </div>
         </div>
       </div>
